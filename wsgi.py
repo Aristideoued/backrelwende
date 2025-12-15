@@ -13,6 +13,7 @@ from models.imageModel import ImageModel
 from models.panierModel import Panier
 from models.produitModel import Produit
 from models.distributionImageModel import DistributionImageModel
+from models.distributionPanierModel import DistributionPanier
 from models.locationImageModel import LocationImageModel
 from flask_cors import CORS
 import logging
