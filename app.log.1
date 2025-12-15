@@ -1,0 +1,30 @@
+Exception on /distributionImages/4 [GET]
+Traceback (most recent call last):
+  File "/home/c2392788c/virtualenv/public_html/relwendeapi/3.12/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/c2392788c/virtualenv/public_html/relwendeapi/3.12/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/c2392788c/virtualenv/public_html/relwendeapi/3.12/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/c2392788c/virtualenv/public_html/relwendeapi/3.12/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/c2392788c/virtualenv/public_html/relwendeapi/3.12/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/c2392788c/virtualenv/public_html/relwendeapi/3.12/lib/python3.12/site-packages/flask_cors/decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "/home/c2392788c/public_html/relwendeapi/api/endpoints/produitEndpoint.py", line 744, in getImageDistribution
+    return send_file(MYDIR +"/images/distributions/"+user1.image, as_attachment=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/c2392788c/virtualenv/public_html/relwendeapi/3.12/lib/python3.12/site-packages/flask/helpers.py", line 518, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/c2392788c/virtualenv/public_html/relwendeapi/3.12/lib/python3.12/site-packages/werkzeug/utils.py", line 428, in send_file
+    stat = os.stat(path)
+           ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/c2392788c/public_html/relwendeapi/api/endpoints/images/distributions/DTRN65gWkAAZcYQ.jpg'
