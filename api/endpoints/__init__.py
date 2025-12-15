@@ -7,6 +7,8 @@ import api.endpoints.produitEndpoint
 import api.endpoints.commandeEndpoint
 import api.endpoints.entreeEndpoint
 import api.endpoints.clientEndpoint
+import api.endpoints.distributionPanierEndpoint
+
 
 
 

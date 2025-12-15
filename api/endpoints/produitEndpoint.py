@@ -4,8 +4,9 @@ import os
 from models.produitModel import Produit
 from models.categorieModel import Categorie
 from models.imageModel import ImageModel
+from models.distributionImageModel import DistributionImageModel
+from models.locationImageModel import LocationImageModel
 from api import app,db,auth,authenticate
-from wsgi import DistributionImageModel, LocationImageModel
 
 from flask_cors import cross_origin
 
